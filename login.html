@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Gustafy</title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+<link rel="stylesheet" href="login.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h2>Entre com sua conta ou crie uma</h2>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Crie uma conta</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>ou se seu email pra se cadastrar</span>
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<button onclick="alert('Cadastro realizado com sucesso')">Crie sua conta</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Entre</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>entre, caso já tenha uma conta</span>
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<a href="#">Esqueceu a senha?</a>
+			<button>entrar</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Bem-Vindo de volta</h1>
+				<p>Para se manter conectado conosco, faça login com suas informações pessoais</p>
+				<button class="ghost" id="signIn">Entre</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Olá, amigo</h1>
+				<p>Insira seus dados e comece a jornada conosco</p>
+				<button class="ghost" id="signUp">inscrever-se</button>
+			</div>
+		</div>
+	</div>Insira seus dados pessoais e comece a jornada conosco
+</div>
+
+<footer>
+
+</footer>
+<!-- partial -->
+  <script>
+ 
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+}); 
+  </script>
+
+</body>
+</html>
